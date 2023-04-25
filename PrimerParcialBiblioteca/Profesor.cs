@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PrimerParcialBiblioteca
 {
-    internal class Profesor
+    public class Profesor
     {
     }
 }

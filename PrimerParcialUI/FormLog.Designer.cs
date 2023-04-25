@@ -1,6 +1,6 @@
 ﻿namespace PrimerParcialUI
 {
-    partial class Form1
+    partial class FormularioLog
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,19 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            btn_ingresar = new Button();
             SuspendLayout();
             // 
-            // Form1
+            // btn_ingresar
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            btn_ingresar.Location = new Point(434, 367);
+            btn_ingresar.Name = "btn_ingresar";
+            btn_ingresar.Size = new Size(112, 34);
+            btn_ingresar.TabIndex = 0;
+            btn_ingresar.Text = "Ingresar";
+            btn_ingresar.UseVisualStyleBackColor = true;
+            // 
+            // FormularioLog
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(663, 450);
-            Name = "Form1";
-            Text = "Form1";
+            ClientSize = new Size(947, 750);
+            Controls.Add(btn_ingresar);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "FormularioLog";
+            Text = "FormularioLog";
             Load += Form1_Load;
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btn_ingresar;
     }
 }

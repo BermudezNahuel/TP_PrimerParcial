@@ -1,8 +1,8 @@
 namespace PrimerParcialUI
 {
-    public partial class Form1 : Form
+    public partial class FormularioLog : Form
     {
-        public Form1()
+        public FormularioLog()
         {
             InitializeComponent();
         }
