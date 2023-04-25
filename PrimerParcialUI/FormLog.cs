@@ -11,5 +11,16 @@ namespace PrimerParcialUI
         {
 
         }
+
+        private void btn_ingresar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_profesor_Click(object sender, EventArgs e)
+        {
+            Profesor_01UI profesorUI = new Profesor_01UI();
+            profesorUI.Show();
+        }
     }
 }

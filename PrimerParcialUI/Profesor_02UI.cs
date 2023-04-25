@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PrimerParcialUI
 {
-    public partial class CargarNotasUI : Form
+    public partial class Profesor_02UI : Form
     {
-        public CargarNotasUI()
+        public Profesor_02UI()
         {
             InitializeComponent();
         }
