@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace PrimerParcialUI
 {
-    public partial class PlanillaInscripcionUI : Form
+    public partial class FormIngreso : Form
     {
-        public PlanillaInscripcionUI()
+        public FormIngreso()
         {
             InitializeComponent();
+        }
+
+        private void PlanillaInscripcionUI_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
