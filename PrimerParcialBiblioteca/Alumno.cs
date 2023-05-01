@@ -10,16 +10,18 @@ namespace PrimerParcialBiblioteca
     {
         private int _legajo;
         private Dictionary<string, int> _dicMaterias = new Dictionary<string, int>();
-        public int Legajo 
-        {   
-            get => _legajo; 
-            set => _legajo = value; 
-        }
+        public static int _año;
 
-        public Alumno(string nombre, string apellido, int dni, string telefono, int legajo) : base(nombre,apellido,dni,telefono)
+        public int Legajo { get => _legajo; set => _legajo = value;}
+
+        public int Año { get => _año; set => _año = value;}
+
+        public Alumno(string nombre, string apellido, int dni, string telefono, int año) : base(nombre,apellido,dni,telefono)
         { 
-            _legajo = legajo;
-        }
+            _legajo++;
+            _año = año;
+            
+        }   
 
         public void CargarNotasAlumno (string materia, int nota)
         {

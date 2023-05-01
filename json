@@ -1,0 +1,39 @@
+{
+    "materias":
+    {
+        "primerAño":
+        [ 
+            "Ciencias Naturales", 
+            "Ciencias Sociales", 
+            "Construcción Ciudadana", 
+            "Educación Artístistica", 
+            "Educación Fisica", 
+            "Matemáticas", 
+            "Prácticas de Lenguaje", 
+            "Inglés"
+        ],
+        "segundoAño":
+        [
+            "Biología",
+            "Construcción Ciudadana",
+            "Educación Artística",
+            "Educación Física",
+            "Físico-Química",
+            "Geografía",
+            "Inglés",
+            "Historia",
+            "Matemática",
+            "Prácticas del Lenguaje"
+        ]
+        
+    },
+    "alumnos":
+    {
+        "primerAño":
+        [
+            {
+
+            }
+        ]
+    }
+}

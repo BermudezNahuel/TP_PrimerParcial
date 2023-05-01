@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             btn_preceptor = new Button();
-            btn_profesor = new Button();
             btn_alumno = new Button();
             lbl_usuario = new Label();
             lbl_contrasenia = new Label();
             txtBox_usuario = new TextBox();
             txtBox_contrasenia = new TextBox();
+            btn_profesor = new Button();
             SuspendLayout();
             // 
             // btn_preceptor
@@ -46,16 +46,6 @@
             btn_preceptor.Text = "Ingreso Preceptor";
             btn_preceptor.UseVisualStyleBackColor = true;
             btn_preceptor.Click += btn_ingresar_Click;
-            // 
-            // btn_profesor
-            // 
-            btn_profesor.Location = new Point(373, 377);
-            btn_profesor.Name = "btn_profesor";
-            btn_profesor.Size = new Size(183, 67);
-            btn_profesor.TabIndex = 1;
-            btn_profesor.Text = "Ingreso Profesor";
-            btn_profesor.UseVisualStyleBackColor = true;
-            btn_profesor.Click += btn_profesor_Click;
             // 
             // btn_alumno
             // 
@@ -98,17 +88,27 @@
             txtBox_contrasenia.Size = new Size(150, 31);
             txtBox_contrasenia.TabIndex = 6;
             // 
+            // btn_profesor
+            // 
+            btn_profesor.Location = new Point(386, 377);
+            btn_profesor.Name = "btn_profesor";
+            btn_profesor.Size = new Size(180, 67);
+            btn_profesor.TabIndex = 8;
+            btn_profesor.Text = "Ingreso Profesor";
+            btn_profesor.UseVisualStyleBackColor = true;
+            btn_profesor.Click += btn_profesor_Click;
+            // 
             // FormularioLog
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(910, 500);
+            Controls.Add(btn_profesor);
             Controls.Add(txtBox_contrasenia);
             Controls.Add(txtBox_usuario);
             Controls.Add(lbl_contrasenia);
             Controls.Add(lbl_usuario);
             Controls.Add(btn_alumno);
-            Controls.Add(btn_profesor);
             Controls.Add(btn_preceptor);
             Margin = new Padding(4, 5, 4, 5);
             Name = "FormularioLog";
@@ -122,11 +122,11 @@
         #endregion
 
         private Button btn_preceptor;
-        private Button btn_profesor;
         private Button btn_alumno;
         private Label lbl_usuario;
         private Label lbl_contrasenia;
         private TextBox txtBox_usuario;
         private TextBox txtBox_contrasenia;
+        private Button btn_profesor;
     }
 }
