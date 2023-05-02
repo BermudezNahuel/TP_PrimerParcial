@@ -32,8 +32,8 @@
             btn_alumno = new Button();
             lbl_usuario = new Label();
             lbl_contrasenia = new Label();
-            txtBox_usuario = new TextBox();
-            txtBox_contrasenia = new TextBox();
+            txt_usuario = new TextBox();
+            txt_password = new TextBox();
             btn_profesor = new Button();
             SuspendLayout();
             // 
@@ -55,6 +55,7 @@
             btn_alumno.TabIndex = 2;
             btn_alumno.Text = "Ingreso Alumnos";
             btn_alumno.UseVisualStyleBackColor = true;
+            btn_alumno.Click += btn_alumno_Click;
             // 
             // lbl_usuario
             // 
@@ -74,19 +75,19 @@
             lbl_contrasenia.TabIndex = 4;
             lbl_contrasenia.Text = "CONTRASEÑA";
             // 
-            // txtBox_usuario
+            // txt_usuario
             // 
-            txtBox_usuario.Location = new Point(386, 94);
-            txtBox_usuario.Name = "txtBox_usuario";
-            txtBox_usuario.Size = new Size(150, 31);
-            txtBox_usuario.TabIndex = 5;
+            txt_usuario.Location = new Point(386, 94);
+            txt_usuario.Name = "txt_usuario";
+            txt_usuario.Size = new Size(150, 31);
+            txt_usuario.TabIndex = 5;
             // 
-            // txtBox_contrasenia
+            // txt_password
             // 
-            txtBox_contrasenia.Location = new Point(386, 236);
-            txtBox_contrasenia.Name = "txtBox_contrasenia";
-            txtBox_contrasenia.Size = new Size(150, 31);
-            txtBox_contrasenia.TabIndex = 6;
+            txt_password.Location = new Point(386, 236);
+            txt_password.Name = "txt_password";
+            txt_password.Size = new Size(150, 31);
+            txt_password.TabIndex = 6;
             // 
             // btn_profesor
             // 
@@ -104,8 +105,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(910, 500);
             Controls.Add(btn_profesor);
-            Controls.Add(txtBox_contrasenia);
-            Controls.Add(txtBox_usuario);
+            Controls.Add(txt_password);
+            Controls.Add(txt_usuario);
             Controls.Add(lbl_contrasenia);
             Controls.Add(lbl_usuario);
             Controls.Add(btn_alumno);
@@ -125,8 +126,8 @@
         private Button btn_alumno;
         private Label lbl_usuario;
         private Label lbl_contrasenia;
-        private TextBox txtBox_usuario;
-        private TextBox txtBox_contrasenia;
+        private TextBox txt_usuario;
+        private TextBox txt_password;
         private Button btn_profesor;
     }
 }

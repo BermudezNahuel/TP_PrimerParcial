@@ -28,57 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dtg_alumno = new DataGridView();
-            Alumno_Legajo = new DataGridViewTextBoxColumn();
-            Alumno_Nombres = new DataGridViewTextBoxColumn();
-            Alumno_Apellidos = new DataGridViewTextBoxColumn();
-            Alumno_Año = new DataGridViewTextBoxColumn();
             btn_AgregarAlumno = new Button();
-            ((System.ComponentModel.ISupportInitialize)dtg_alumno).BeginInit();
+            lbl_nombre = new Label();
+            lbl_anio = new Label();
+            lbl_telefono = new Label();
+            lbl_apellido = new Label();
+            lbl_dni = new Label();
+            txt_nombre = new TextBox();
+            txt_apellido = new TextBox();
+            txt_dni = new TextBox();
+            txt_telefono = new TextBox();
+            txt_anio = new TextBox();
             SuspendLayout();
-            // 
-            // dtg_alumno
-            // 
-            dtg_alumno.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtg_alumno.Columns.AddRange(new DataGridViewColumn[] { Alumno_Legajo, Alumno_Nombres, Alumno_Apellidos, Alumno_Año });
-            dtg_alumno.Location = new Point(12, 46);
-            dtg_alumno.Name = "dtg_alumno";
-            dtg_alumno.RowHeadersWidth = 62;
-            dtg_alumno.RowTemplate.Height = 33;
-            dtg_alumno.Size = new Size(1020, 257);
-            dtg_alumno.TabIndex = 0;
-            // 
-            // Alumno_Legajo
-            // 
-            Alumno_Legajo.HeaderText = "Legajo";
-            Alumno_Legajo.MinimumWidth = 8;
-            Alumno_Legajo.Name = "Alumno_Legajo";
-            Alumno_Legajo.Width = 150;
-            // 
-            // Alumno_Nombres
-            // 
-            Alumno_Nombres.HeaderText = "Nombres";
-            Alumno_Nombres.MinimumWidth = 8;
-            Alumno_Nombres.Name = "Alumno_Nombres";
-            Alumno_Nombres.Width = 150;
-            // 
-            // Alumno_Apellidos
-            // 
-            Alumno_Apellidos.HeaderText = "Apellidos";
-            Alumno_Apellidos.MinimumWidth = 8;
-            Alumno_Apellidos.Name = "Alumno_Apellidos";
-            Alumno_Apellidos.Width = 150;
-            // 
-            // Alumno_Año
-            // 
-            Alumno_Año.HeaderText = "Año";
-            Alumno_Año.MinimumWidth = 8;
-            Alumno_Año.Name = "Alumno_Año";
-            Alumno_Año.Width = 150;
             // 
             // btn_AgregarAlumno
             // 
-            btn_AgregarAlumno.Location = new Point(762, 518);
+            btn_AgregarAlumno.Location = new Point(452, 247);
             btn_AgregarAlumno.Name = "btn_AgregarAlumno";
             btn_AgregarAlumno.Size = new Size(236, 70);
             btn_AgregarAlumno.TabIndex = 1;
@@ -86,26 +51,120 @@
             btn_AgregarAlumno.UseVisualStyleBackColor = true;
             btn_AgregarAlumno.Click += button1_Click;
             // 
+            // lbl_nombre
+            // 
+            lbl_nombre.AutoSize = true;
+            lbl_nombre.Location = new Point(77, 35);
+            lbl_nombre.Name = "lbl_nombre";
+            lbl_nombre.Size = new Size(78, 25);
+            lbl_nombre.TabIndex = 2;
+            lbl_nombre.Text = "Nombre";
+            // 
+            // lbl_anio
+            // 
+            lbl_anio.AutoSize = true;
+            lbl_anio.Location = new Point(298, 145);
+            lbl_anio.Name = "lbl_anio";
+            lbl_anio.Size = new Size(45, 25);
+            lbl_anio.TabIndex = 3;
+            lbl_anio.Text = "Año";
+            // 
+            // lbl_telefono
+            // 
+            lbl_telefono.AutoSize = true;
+            lbl_telefono.Location = new Point(77, 145);
+            lbl_telefono.Name = "lbl_telefono";
+            lbl_telefono.Size = new Size(79, 25);
+            lbl_telefono.TabIndex = 4;
+            lbl_telefono.Text = "Telefono";
+            // 
+            // lbl_apellido
+            // 
+            lbl_apellido.AutoSize = true;
+            lbl_apellido.Location = new Point(298, 35);
+            lbl_apellido.Name = "lbl_apellido";
+            lbl_apellido.Size = new Size(78, 25);
+            lbl_apellido.TabIndex = 5;
+            lbl_apellido.Text = "Apellido";
+            // 
+            // lbl_dni
+            // 
+            lbl_dni.AutoSize = true;
+            lbl_dni.Location = new Point(514, 35);
+            lbl_dni.Name = "lbl_dni";
+            lbl_dni.Size = new Size(43, 25);
+            lbl_dni.TabIndex = 6;
+            lbl_dni.Text = "DNI";
+            // 
+            // txt_nombre
+            // 
+            txt_nombre.Location = new Point(28, 68);
+            txt_nombre.Name = "txt_nombre";
+            txt_nombre.Size = new Size(188, 31);
+            txt_nombre.TabIndex = 7;
+            // 
+            // txt_apellido
+            // 
+            txt_apellido.Location = new Point(250, 63);
+            txt_apellido.Name = "txt_apellido";
+            txt_apellido.Size = new Size(197, 31);
+            txt_apellido.TabIndex = 8;
+            // 
+            // txt_dni
+            // 
+            txt_dni.Location = new Point(489, 63);
+            txt_dni.Name = "txt_dni";
+            txt_dni.Size = new Size(199, 31);
+            txt_dni.TabIndex = 9;
+            // 
+            // txt_telefono
+            // 
+            txt_telefono.Location = new Point(28, 187);
+            txt_telefono.Name = "txt_telefono";
+            txt_telefono.Size = new Size(188, 31);
+            txt_telefono.TabIndex = 10;
+            // 
+            // txt_anio
+            // 
+            txt_anio.Location = new Point(250, 187);
+            txt_anio.Name = "txt_anio";
+            txt_anio.Size = new Size(188, 31);
+            txt_anio.TabIndex = 11;
+            // 
             // PreceptorUI
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1044, 643);
+            ClientSize = new Size(1059, 339);
+            Controls.Add(txt_anio);
+            Controls.Add(txt_telefono);
+            Controls.Add(txt_dni);
+            Controls.Add(txt_apellido);
+            Controls.Add(txt_nombre);
+            Controls.Add(lbl_dni);
+            Controls.Add(lbl_apellido);
+            Controls.Add(lbl_telefono);
+            Controls.Add(lbl_anio);
+            Controls.Add(lbl_nombre);
             Controls.Add(btn_AgregarAlumno);
-            Controls.Add(dtg_alumno);
             Name = "PreceptorUI";
             Text = "PreceptorUI";
-            ((System.ComponentModel.ISupportInitialize)dtg_alumno).EndInit();
+            Load += PreceptorUI_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private DataGridView dtg_alumno;
-        private DataGridViewTextBoxColumn Alumno_Legajo;
-        private DataGridViewTextBoxColumn Alumno_Nombres;
-        private DataGridViewTextBoxColumn Alumno_Apellidos;
-        private DataGridViewTextBoxColumn Alumno_Año;
         private Button btn_AgregarAlumno;
+        private Label lbl_nombre;
+        private Label lbl_anio;
+        private Label lbl_telefono;
+        private Label lbl_apellido;
+        private Label lbl_dni;
+        private TextBox txt_nombre;
+        private TextBox txt_apellido;
+        private TextBox txt_dni;
+        private TextBox txt_telefono;
+        private TextBox txt_anio;
     }
 }

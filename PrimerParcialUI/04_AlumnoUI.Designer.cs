@@ -1,6 +1,6 @@
 ﻿namespace PrimerParcialUI
 {
-    partial class VerNotasUI
+    partial class AlumnoUI
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,10 @@
             dataGridView_notas = new DataGridView();
             Materias = new DataGridViewTextBoxColumn();
             Notas = new DataGridViewTextBoxColumn();
+            txt_nombre = new TextBox();
+            lbl_nombre = new Label();
+            txt_apellido = new TextBox();
+            lbl_apellido = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView_notas).BeginInit();
             SuspendLayout();
             // 
@@ -39,7 +43,7 @@
             dataGridView_notas.AllowUserToOrderColumns = true;
             dataGridView_notas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_notas.Columns.AddRange(new DataGridViewColumn[] { Materias, Notas });
-            dataGridView_notas.Location = new Point(12, 201);
+            dataGridView_notas.Location = new Point(72, 124);
             dataGridView_notas.Name = "dataGridView_notas";
             dataGridView_notas.RowHeadersWidth = 62;
             dataGridView_notas.RowTemplate.Height = 33;
@@ -61,16 +65,55 @@
             Notas.Name = "Notas";
             Notas.Width = 150;
             // 
-            // VerNotasUI
+            // txt_nombre
+            // 
+            txt_nombre.Location = new Point(99, 49);
+            txt_nombre.Name = "txt_nombre";
+            txt_nombre.Size = new Size(150, 31);
+            txt_nombre.TabIndex = 1;
+            txt_nombre.TextChanged += textBox1_TextChanged;
+            // 
+            // lbl_nombre
+            // 
+            lbl_nombre.AutoSize = true;
+            lbl_nombre.Location = new Point(103, 14);
+            lbl_nombre.Name = "lbl_nombre";
+            lbl_nombre.Size = new Size(78, 25);
+            lbl_nombre.TabIndex = 2;
+            lbl_nombre.Text = "Nombre";
+            // 
+            // txt_apellido
+            // 
+            txt_apellido.Location = new Point(417, 49);
+            txt_apellido.Name = "txt_apellido";
+            txt_apellido.Size = new Size(150, 31);
+            txt_apellido.TabIndex = 3;
+            // 
+            // lbl_apellido
+            // 
+            lbl_apellido.AutoSize = true;
+            lbl_apellido.Location = new Point(417, 14);
+            lbl_apellido.Name = "lbl_apellido";
+            lbl_apellido.Size = new Size(78, 25);
+            lbl_apellido.TabIndex = 4;
+            lbl_apellido.Text = "Apellido";
+            // 
+            // AlumnoUI
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(933, 551);
+            Controls.Add(lbl_apellido);
+            Controls.Add(txt_apellido);
+            Controls.Add(lbl_nombre);
+            Controls.Add(txt_nombre);
             Controls.Add(dataGridView_notas);
-            Name = "VerNotasUI";
+            Name = "AlumnoUI";
             Text = "VerNotasUI";
+            Load += AlumnoUI_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView_notas).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -78,5 +121,9 @@
         private DataGridView dataGridView_notas;
         private DataGridViewTextBoxColumn Materias;
         private DataGridViewTextBoxColumn Notas;
+        private TextBox txt_nombre;
+        private Label lbl_nombre;
+        private TextBox txt_apellido;
+        private Label lbl_apellido;
     }
 }

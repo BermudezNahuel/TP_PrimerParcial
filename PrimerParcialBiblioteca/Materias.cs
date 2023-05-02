@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace PrimerParcialBiblioteca
 {
-    public class Materias
+    public class Materia
     {
         public List<string> primerAño;
+        public Dictionary<string, Dictionary<string, int>> materia;
         public List<string> segundoAño;
+        
 
-        public Materias(string archivo)
-        {
-            primerAño = new List<string>();
-            segundoAño = new List<string>();
-        }
+
+        
 
 
         //public Dictionary<string, int> segundoAño;

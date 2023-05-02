@@ -10,18 +10,18 @@ namespace PrimerParcialBiblioteca
     {
         private int _legajo;
         private Dictionary<string, int> _dicMaterias = new Dictionary<string, int>();
-        public static int _año;
+        public static int _anio;
 
         public int Legajo { get => _legajo; set => _legajo = value;}
 
-        public int Año { get => _año; set => _año = value;}
+        public int Anio { get => _anio; set => _anio = value;}
 
-        public Alumno(string nombre, string apellido, int dni, string telefono, int año) : base(nombre,apellido,dni,telefono)
+        public Alumno(string nombre, string apellido, int dni, string telefono, int anio, int legajo) : base(nombre,apellido,dni,telefono)
         { 
-            _legajo++;
-            _año = año;
-            
-        }   
+            _anio = anio;
+            _legajo = legajo;
+        }  
+       
 
         public void CargarNotasAlumno (string materia, int nota)
         {
@@ -39,6 +39,18 @@ namespace PrimerParcialBiblioteca
                     
                     
                 }
+            return sb.ToString();
+        }
+
+        public string MostrarInfo()
+        {
+            StringBuilder sb = new StringBuilder ();
+            sb.AppendLine($"Nombre: {base.Nombre}");
+            sb.AppendLine($"Apellido: {base.Apellido}");
+            sb.AppendLine($"DNI: {base.Dni}");
+            sb.AppendLine($"Telefono: {base.Telefono}");
+            sb.AppendLine($"Legajo: {_legajo}");
+            sb.AppendLine($"Año: {_anio}");
             return sb.ToString();
         }
     }
