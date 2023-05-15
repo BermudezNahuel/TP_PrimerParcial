@@ -87,7 +87,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1059, 621);
             Controls.Add(cbo_anio);
             Controls.Add(cbo_materia);
             Controls.Add(lbl_anio);

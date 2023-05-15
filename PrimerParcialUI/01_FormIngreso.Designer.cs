@@ -35,11 +35,12 @@
             txt_usuario = new TextBox();
             txt_password = new TextBox();
             btn_profesor = new Button();
+            btn_ingreso = new Button();
             SuspendLayout();
             // 
             // btn_preceptor
             // 
-            btn_preceptor.Location = new Point(104, 377);
+            btn_preceptor.Location = new Point(109, 318);
             btn_preceptor.Name = "btn_preceptor";
             btn_preceptor.Size = new Size(180, 67);
             btn_preceptor.TabIndex = 0;
@@ -49,7 +50,7 @@
             // 
             // btn_alumno
             // 
-            btn_alumno.Location = new Point(637, 377);
+            btn_alumno.Location = new Point(628, 318);
             btn_alumno.Name = "btn_alumno";
             btn_alumno.Size = new Size(184, 67);
             btn_alumno.TabIndex = 2;
@@ -91,7 +92,7 @@
             // 
             // btn_profesor
             // 
-            btn_profesor.Location = new Point(386, 377);
+            btn_profesor.Location = new Point(386, 318);
             btn_profesor.Name = "btn_profesor";
             btn_profesor.Size = new Size(180, 67);
             btn_profesor.TabIndex = 8;
@@ -99,11 +100,25 @@
             btn_profesor.UseVisualStyleBackColor = true;
             btn_profesor.Click += btn_profesor_Click;
             // 
+            // btn_ingreso
+            // 
+            btn_ingreso.FlatAppearance.BorderColor = Color.Black;
+            btn_ingreso.FlatAppearance.BorderSize = 4;
+            btn_ingreso.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_ingreso.Location = new Point(324, 450);
+            btn_ingreso.Name = "btn_ingreso";
+            btn_ingreso.Size = new Size(307, 135);
+            btn_ingreso.TabIndex = 9;
+            btn_ingreso.Text = "INGRESAR";
+            btn_ingreso.UseVisualStyleBackColor = true;
+            btn_ingreso.Click += btn_ingreso_Click;
+            // 
             // FormularioLog
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(910, 500);
+            ClientSize = new Size(1059, 621);
+            Controls.Add(btn_ingreso);
             Controls.Add(btn_profesor);
             Controls.Add(txt_password);
             Controls.Add(txt_usuario);
@@ -129,5 +144,6 @@
         private TextBox txt_usuario;
         private TextBox txt_password;
         private Button btn_profesor;
+        private Button btn_ingreso;
     }
 }

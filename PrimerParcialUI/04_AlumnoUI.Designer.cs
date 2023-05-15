@@ -35,6 +35,7 @@
             lbl_nombre = new Label();
             txt_apellido = new TextBox();
             lbl_apellido = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView_notas).BeginInit();
             SuspendLayout();
             // 
@@ -71,7 +72,6 @@
             txt_nombre.Name = "txt_nombre";
             txt_nombre.Size = new Size(150, 31);
             txt_nombre.TabIndex = 1;
-            txt_nombre.TextChanged += textBox1_TextChanged;
             // 
             // lbl_nombre
             // 
@@ -98,19 +98,31 @@
             lbl_apellido.TabIndex = 4;
             lbl_apellido.Text = "Apellido";
             // 
+            // button1
+            // 
+            button1.Location = new Point(634, 27);
+            button1.Name = "button1";
+            button1.Size = new Size(174, 53);
+            button1.TabIndex = 5;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // AlumnoUI
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(933, 551);
+            ClientSize = new Size(1059, 621);
+            Controls.Add(button1);
             Controls.Add(lbl_apellido);
             Controls.Add(txt_apellido);
             Controls.Add(lbl_nombre);
             Controls.Add(txt_nombre);
             Controls.Add(dataGridView_notas);
             Name = "AlumnoUI";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "VerNotasUI";
-            Load += AlumnoUI_Load;
+            Load += AlumnoUI_OnLoad;
             ((System.ComponentModel.ISupportInitialize)dataGridView_notas).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -125,5 +137,6 @@
         private Label lbl_nombre;
         private TextBox txt_apellido;
         private Label lbl_apellido;
+        private Button button1;
     }
 }

@@ -62,7 +62,7 @@ namespace PrimerParcialUI
                 cbo_materia.Items.Add("Prácticas del Lenguaje");
                 cbo_materia.Items.Add("Construcción Ciudadana");
             }
-            else 
+            else
             {
                 cbo_materia.Items.Add("Ciencias Naturales");
                 cbo_materia.Items.Add("Ciencias Sociales");

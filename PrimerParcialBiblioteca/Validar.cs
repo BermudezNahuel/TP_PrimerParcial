@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -39,6 +40,32 @@ namespace PrimerParcialBiblioteca
             return false;
         }
 
+        //_____________________________________________________________________________________________________________
+
+        public static bool ValidarIngresoUsuario(List<Alumno> listaAlumno, int usuario, int password)
+        {
+            var listaAlumnos = Datos<List<Alumno>>.Abrir("C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datosAlumnos.json");
+
+            foreach (var alumno in listaAlumnos)
+            {
+                if (alumno.Dni == usuario && alumno.Password == password)
+                {
+                    alumno.Activo = true;
+                    Datos<Alumno>.Guardar(listaAlumnos, "C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datosAlumnos.json");
+
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+
+        //public static string ValidarTipo()
+        //{
+        //    Type tipo = dni.GetType();
+        //    return tipo;
+        //}
 
 
 

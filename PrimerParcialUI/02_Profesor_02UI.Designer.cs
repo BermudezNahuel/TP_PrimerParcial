@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            SuspendLayout();
+            // 
+            // Profesor_02UI
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1059, 621);
+            Name = "Profesor_02UI";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Profesor_02UI";
+            ResumeLayout(false);
         }
 
         #endregion

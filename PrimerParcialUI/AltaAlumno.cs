@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrimerParcialBiblioteca;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PrimerParcialUI
 {
-    public partial class FormIngreso : Form
+    public partial class FormIngresoAlumno : Form
     {
-        public FormIngreso()
+        public FormIngresoAlumno()
         {
             InitializeComponent();
         }
@@ -20,6 +21,17 @@ namespace PrimerParcialUI
         private void PlanillaInscripcionUI_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_crear_Click(object sender, EventArgs e)
+        {
+            CrearUsuario.CrearAlumno(txt_nombre.Text, txt_apellido.Text, Convert.ToInt32(txt_dni.Text), txt_telefono.Text, Convert.ToInt32(txt_anio.Text));
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
