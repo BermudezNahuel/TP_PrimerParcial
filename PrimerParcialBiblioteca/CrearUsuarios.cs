@@ -7,23 +7,28 @@ using System.Threading.Tasks;
 
 namespace PrimerParcialBiblioteca
 {
-    public static class CrearUsuario
+    public static class AdministrarUsuario
     {
         
-        public static void CrearAlumno(string nombre, string apellido, int dni, string telefono, int anio)
+        public static void AgregarUsuario(string nombre, string apellido, int dni, string telefono, int anio)
         {
-            var listaAlumnos = Datos<List<Alumno>>.Abrir("C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datosAlumnos.json");
+            var datos = Datos.Abrir("C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datos_1.json");
 
-            var listaDnis = Buscar<Alumno>.ListarDni(listaAlumnos);
+            var listaAlumnos = datos.Alumnos;
+
+            var listaMaterias = datos.Materias;
+
+            var listaDnis = Buscar.ListarDni(listaAlumnos);
 
             int lenghtLista = listaAlumnos[listaAlumnos.Count - 1].Legajo;
 
-            var alumno = new Alumno(nombre, apellido, dni, telefono, anio, lenghtLista);
+            var alumno = new Alumno(nombre, apellido, dni, telefono, anio, lenghtLista, Notas.AsignarMaterias((anio-1)));
+            
             Validar.ValidarDniOrThrow(alumno.Dni, listaDnis);
 
             listaAlumnos.Add(alumno);
 
-            Datos<Alumno>.Guardar(listaAlumnos, "C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datosAlumnos.json");
+            Datos.Guardar(datos, "C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datos_1.json");
         }
     }
 }

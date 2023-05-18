@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PrimerParcialBiblioteca
 {
-    public static class Buscar<T>
+    public static class Buscar
     {
         public static List<int> ListarDni(List<Alumno> listaAlumnos)
         {

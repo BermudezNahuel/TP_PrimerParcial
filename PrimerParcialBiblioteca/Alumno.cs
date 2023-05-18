@@ -9,40 +9,34 @@ namespace PrimerParcialBiblioteca
     public class Alumno : User
     {
         private int _legajo;
-        public static int _anio;
-        //private Dictionary<string, int> _dicMaterias = new Dictionary<string, int>();
+        private static int _anio;
+        private Dictionary<string, List<int>> _notas;
+        //public string _notas { get; set; }
 
         public int Legajo { get => _legajo; set => _legajo = value;}
 
         public int Anio { get => _anio; set => _anio = value;}
 
-        public Alumno(string nombre, string apellido, int dni, string telefono, int anio, int lengthLista) : base(nombre,apellido,dni,telefono)
+        public Dictionary<string, List<int>> Notas
+        {
+            get => _notas; set => _notas = value;
+        }
+
+        //public void notas (string dicc)
+        //{
+        //    _notas = dicc;
+        //}
+
+        public Alumno(string nombre, string apellido, int dni, string telefono, int anio, int lengthLista, Dictionary<string, List<int>> dicc) : base(nombre,apellido,dni,telefono)
         { 
             _anio = anio;
             _legajo = lengthLista + 1;
+            _notas = dicc;
+            
         }  
        
 
-        //public void CargarNotasAlumno (string materia, int nota)
-        //{
-        //    //_dicMaterias = new Dictionary<string, int> ();
-        //    _dicMaterias.Add(materia, nota);
-        //}
-
-        //public string MostrarNotaMaterias()
-        //{
-        //    StringBuilder sb = new StringBuilder ();
-        //    //string mensaje = "";
-        //        foreach (KeyValuePair<string, int> entry in _dicMaterias)
-        //        {
-        //            sb.AppendLine ($"Materia: {entry.Key} | Nota: {entry.Value}" );
-                    
-                    
-        //        }
-        //    return sb.ToString();
-        //}
-
-        public string MostrarInfo()
+        public override string MostrarInfo()
         {
             StringBuilder sb = new StringBuilder ();
             sb.AppendLine($"Nombre: {base.Nombre}");
@@ -52,6 +46,14 @@ namespace PrimerParcialBiblioteca
             sb.AppendLine($"Legajo: {_legajo}");
             sb.AppendLine($"Año: {_anio}");
             sb.AppendLine($"Activo: {base.Activo}");
+            sb.AppendLine("#### NOTAS ####");
+
+            foreach (var (key, value) in _notas)
+            {
+
+                sb.AppendLine($"{key.PadRight(22)}\t : {value[0]}\t {value[1]}\t {value[2]}\t");
+            }
+
             return sb.ToString();
         }
     }

@@ -10,19 +10,19 @@ using System.Text.Json;
 
 namespace PrimerParcialBiblioteca
 {
-    public static class Datos<T>
+    public static class Datos
     {
-        public static T Abrir(string path)
+        public static ClaseMaestra Abrir(string path)
         {
             using var sr = new StreamReader(path);
             string json = sr.ReadToEnd();
-            var lista = JsonConvert.DeserializeObject<T>(json);
-            return lista;
+            var datos = JsonConvert.DeserializeObject<ClaseMaestra>(json);
+            return datos;
         }
 
-        public static void Guardar(List<T> lista, string ruta)
+        public static void Guardar(ClaseMaestra datos, string ruta)
         {
-            string archivoJson = JsonConvert.SerializeObject(lista.ToArray(), Formatting.Indented);
+            string archivoJson = JsonConvert.SerializeObject(datos, Formatting.Indented);
             File.WriteAllText(ruta, archivoJson);
         }
 

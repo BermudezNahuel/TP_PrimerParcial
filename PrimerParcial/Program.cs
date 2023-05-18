@@ -14,7 +14,7 @@ namespace PrimerParcial
     {
         static void Main(string[] args)
         {
-      
+
 
             //foreach (var dni in listaAlumnos)
             //{
@@ -24,34 +24,43 @@ namespace PrimerParcial
             //}
 
 
-            using var sr = new StreamReader("C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datos_1.json");
-            string json = sr.ReadToEnd();
-
-            ////convierto un string en un JsonNode
-            //JsonNode nodoAlumnos = JsonNode.Parse(json)!;
-            ////Obtengo el nodo que busco
-            //JsonNode datosDisponibles = nodoAlumnos!["alumnos"]!;
+            //var datos = Datos.Abrir("C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datos_1.json");
 
             ////Instancio un nuevo alumno
-            //Alumno alumnoCuatro = new Alumno("carlor", "martinez", 43123412, "34124312", 4, 3);
-            ////Lo serializo
-            //JsonNode alumnoJson = JsonConvert.SerializeObject(alumnoCuatro, Formatting.Indented);
+
+            //Alumno alumnoCuatro = new Alumno("Carlos", "Martinez", 43123412, "34124312", 4, 3, Notas.AsignarMaterias(3));
+
+            ////alumnoCuatro.notas(Notas.AsignarMaterias(3));
+
+            //var alumnos = datos.Alumnos;
+
+            //datos.AgregarUsuario(alumnoCuatro);
 
 
-            //Console.WriteLine(alumnoJson);
-            //JsonNode alumnoCuatroJsonNode = alumnoJson;
+            AdministrarUsuario.AgregarUsuario("Carlos", "Martinez", 43123412, "34124312", 4);
+
+            //foreach (var alumno in alumnos)
+            //{
+            //    //alumno.notas(Notas.AsignarMaterias(alumno.Anio));
+            //    Console.WriteLine(alumno.MostrarInfo());
+            //}
 
 
-            var datosDeserializado = JsonConvert.DeserializeObject<ClaseMaestra>(json);
+            //Datos.Guardar(datos, "C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datos_1.json");
 
-            var alumnos = datosDeserializado.Alumnos;
-            
-            foreach (var alumno in alumnos)
-            {
-                Console.WriteLine(alumno.MostrarInfo());
-            }
 
-           
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         }

@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             dataGridView_notas = new DataGridView();
-            Materias = new DataGridViewTextBoxColumn();
-            Notas = new DataGridViewTextBoxColumn();
             txt_nombre = new TextBox();
             lbl_nombre = new Label();
             txt_apellido = new TextBox();
             lbl_apellido = new Label();
             button1 = new Button();
+            Materias = new DataGridViewTextBoxColumn();
+            Notas = new DataGridViewTextBoxColumn();
+            Col_SegundoCuatri = new DataGridViewTextBoxColumn();
+            Col_NotaFinal = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView_notas).BeginInit();
             SuspendLayout();
             // 
@@ -43,28 +45,14 @@
             // 
             dataGridView_notas.AllowUserToOrderColumns = true;
             dataGridView_notas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_notas.Columns.AddRange(new DataGridViewColumn[] { Materias, Notas });
-            dataGridView_notas.Location = new Point(72, 124);
+            dataGridView_notas.Columns.AddRange(new DataGridViewColumn[] { Materias, Notas, Col_SegundoCuatri, Col_NotaFinal });
+            dataGridView_notas.Location = new Point(99, 128);
             dataGridView_notas.Name = "dataGridView_notas";
             dataGridView_notas.RowHeadersWidth = 62;
             dataGridView_notas.RowTemplate.Height = 33;
             dataGridView_notas.Size = new Size(726, 338);
             dataGridView_notas.TabIndex = 0;
             dataGridView_notas.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // Materias
-            // 
-            Materias.HeaderText = "Materias";
-            Materias.MinimumWidth = 8;
-            Materias.Name = "Materias";
-            Materias.Width = 150;
-            // 
-            // Notas
-            // 
-            Notas.HeaderText = "Notas";
-            Notas.MinimumWidth = 8;
-            Notas.Name = "Notas";
-            Notas.Width = 150;
             // 
             // txt_nombre
             // 
@@ -108,6 +96,34 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // Materias
+            // 
+            Materias.HeaderText = "Materias";
+            Materias.MinimumWidth = 8;
+            Materias.Name = "Materias";
+            Materias.Width = 150;
+            // 
+            // Notas
+            // 
+            Notas.HeaderText = "Primer Cuatrimestre";
+            Notas.MinimumWidth = 8;
+            Notas.Name = "Notas";
+            Notas.Width = 150;
+            // 
+            // Col_SegundoCuatri
+            // 
+            Col_SegundoCuatri.HeaderText = "Segundo Cuatrimestre";
+            Col_SegundoCuatri.MinimumWidth = 8;
+            Col_SegundoCuatri.Name = "Col_SegundoCuatri";
+            Col_SegundoCuatri.Width = 150;
+            // 
+            // Col_NotaFinal
+            // 
+            Col_NotaFinal.HeaderText = "Nota Final";
+            Col_NotaFinal.MinimumWidth = 8;
+            Col_NotaFinal.Name = "Col_NotaFinal";
+            Col_NotaFinal.Width = 150;
+            // 
             // AlumnoUI
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -131,12 +147,14 @@
         #endregion
 
         private DataGridView dataGridView_notas;
-        private DataGridViewTextBoxColumn Materias;
-        private DataGridViewTextBoxColumn Notas;
         private TextBox txt_nombre;
         private Label lbl_nombre;
         private TextBox txt_apellido;
         private Label lbl_apellido;
         private Button button1;
+        private DataGridViewTextBoxColumn Materias;
+        private DataGridViewTextBoxColumn Notas;
+        private DataGridViewTextBoxColumn Col_SegundoCuatri;
+        private DataGridViewTextBoxColumn Col_NotaFinal;
     }
 }

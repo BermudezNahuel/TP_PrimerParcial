@@ -42,16 +42,16 @@ namespace PrimerParcialBiblioteca
 
         //_____________________________________________________________________________________________________________
 
-        public static bool ValidarIngresoUsuario(List<Alumno> listaAlumno, int usuario, int password)
+        public static bool ValidarIngresoAlumno(List<Alumno> listaAlumno, int usuario, int password)
         {
-            var listaAlumnos = Datos<List<Alumno>>.Abrir("C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datosAlumnos.json");
+            var listaAlumnos = Datos.Abrir("C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datosAlumnos.json").Alumnos;
 
             foreach (var alumno in listaAlumnos)
             {
                 if (alumno.Dni == usuario && alumno.Password == password)
                 {
                     alumno.Activo = true;
-                    Datos<Alumno>.Guardar(listaAlumnos, "C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datosAlumnos.json");
+                    //Datos<Alumno>.Guardar(listaAlumnos, "C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datosAlumnos.json");
 
                     return true;
                 }

@@ -8,25 +8,25 @@ namespace PrimerParcialBiblioteca
 {
     public class ClaseMaestra
     {
-        public Alumno[] Alumnos { get; set; }
-        public Profesor[] Profesores { get; set; }
+        public List<Materia> Materias { get; set; }
+        public List<Alumno> Alumnos { get; set; }
+        public List<Profesor> Profesores { get; set; }
 
-       
-        
+        public Administrador Admin{ get; set;  }
 
 
+
+
+        public void AgregarUsuario(Alumno usuario)
+        {
+            //Validar.ValidarDniOrThrow(usuario.Dni,);
+            Alumnos.Add(usuario);
+        }
+        public void AgregarUsuario(Profesor usuario)
+        {
+            Profesores.Add(usuario);
+        }
 
     }
 
-
-    public class ListaAlumnos
-    {
-        public Alumno[] Alumnos { get; set; }
-        public Profesor[] Profesores { get; set; }
-    }
-
-    public class profesores
-    {
-        public Profesor[] listaProfesor { get; set; }
-    }
 }

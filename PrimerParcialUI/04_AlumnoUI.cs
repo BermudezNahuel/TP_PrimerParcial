@@ -26,7 +26,7 @@ namespace PrimerParcialUI
 
         private void AlumnoUI_OnLoad(object sender, EventArgs e)
         {
-            var listaAlumnos = Datos<List<Alumno>>.Abrir("C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datosAlumnos.json");
+            var listaAlumnos = Datos.Abrir("C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datos_1.json").Alumnos;
 
             foreach (var alumno in listaAlumnos)
             {
@@ -41,7 +41,7 @@ namespace PrimerParcialUI
                     alumno.Activo = false;
                 }
             }
-            Datos<Alumno>.Guardar(listaAlumnos, "C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datosAlumnos.json");
+            //Datos<Alumno>.Guardar(listaAlumnos, "C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datosAlumnos.json");
 
 
 
@@ -49,7 +49,7 @@ namespace PrimerParcialUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var listaAlumnos = Datos<List<Alumno>>.Abrir("C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datosAlumnos.json");
+            var listaAlumnos = Datos.Abrir("C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datos_1.json").Alumnos;
 
             foreach (var alumno in listaAlumnos)
             {
