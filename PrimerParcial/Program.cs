@@ -24,43 +24,51 @@ namespace PrimerParcial
             //}
 
 
-            //var datos = Datos.Abrir("C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datos_1.json");
+            //AdministrarUsuario.AgregarUsuario("Martin", "Juarez", 45123412, "34124312", 4);
 
-            ////Instancio un nuevo alumno
-
-            //Alumno alumnoCuatro = new Alumno("Carlos", "Martinez", 43123412, "34124312", 4, 3, Notas.AsignarMaterias(3));
-
-            ////alumnoCuatro.notas(Notas.AsignarMaterias(3));
-
-            //var alumnos = datos.Alumnos;
-
-            //datos.AgregarUsuario(alumnoCuatro);
-
-
-            AdministrarUsuario.AgregarUsuario("Carlos", "Martinez", 43123412, "34124312", 4);
-
-            //foreach (var alumno in alumnos)
+            //try
             //{
-            //    //alumno.notas(Notas.AsignarMaterias(alumno.Anio));
-            //    Console.WriteLine(alumno.MostrarInfo());
+
+            //    int nue = 5 / x;
+            //    Console.WriteLine("No entro al catch");
+
+            //}
+            //catch (LoginFallido ex)
+            //{
+
+            //    //Codigo que sucede cuando sucede la excepcion
+            //    Console.WriteLine("Entro al catch");
+
             //}
 
+            var list = Datos.Abrir().Profesores;
 
-            //Datos.Guardar(datos, "C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datos_1.json");
+            foreach (var prof in list)
+            {
+                Console.WriteLine(prof.MostrarInfo());
+                foreach (var item in prof.MateriasDictadas) 
+                {
+                    Console.WriteLine( item.MostrarInfo());
+                }
+            }
 
+            var cursos = ClaseEnum.Curso.PrimerAño;
+            
 
+            string archivoJson = JsonConvert.SerializeObject(cursos, Formatting.Indented);
+            File.WriteAllText("C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\enum_01.json", archivoJson);
 
+            var prfo1 = list[1];
 
-
-
-
-
-
-
-
-
-
-
+            foreach (var item in prfo1.MateriasDictadas)
+            {
+                //cbo_anio.Items.Add((int)item.Curso);
+                foreach (var materia in item.Materias)
+                {
+                    //cbo_materia.Items.Add(item.ToString());
+                    Console.WriteLine(materia);
+                }
+            }
 
 
         }

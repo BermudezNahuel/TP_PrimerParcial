@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -30,36 +31,55 @@ namespace PrimerParcialBiblioteca
             return dni;
         }
 
-        static public bool ValidarUsuario(int dni, int password)
-        {
-            if (dni == password)
-            {
-                return true;
-
-            }
-            return false;
-        }
+       
 
         //_____________________________________________________________________________________________________________
 
-        public static bool ValidarIngresoAlumno(List<Alumno> listaAlumno, int usuario, int password)
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        /// <exception cref="LoginFallido"></exception>
+        public static bool ValidarUsuario(List<Alumno> lista,int usuario, int password)
         {
-            var listaAlumnos = Datos.Abrir("C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datosAlumnos.json").Alumnos;
-
-            foreach (var alumno in listaAlumnos)
+            foreach (var item in lista)
             {
-                if (alumno.Dni == usuario && alumno.Password == password)
+                if (item.Dni == usuario && item.Password == password)
                 {
-                    alumno.Activo = true;
-                    //Datos<Alumno>.Guardar(listaAlumnos, "C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datosAlumnos.json");
-
                     return true;
                 }
             }
-
             return false;
         }
 
+        public static bool ValidarUsuario(List<Profesor> lista, int usuario, int password)
+        {
+            foreach (var item in lista)
+            {
+                if (item.Dni == usuario && item.Password == password)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static bool ValidarUsuario(List<Administrador> lista, int usuario, int password)
+        {
+            foreach (var item in lista)
+            {
+                if (item.Dni == usuario && item.Password == password)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        
 
         //public static string ValidarTipo()
         //{
@@ -68,6 +88,8 @@ namespace PrimerParcialBiblioteca
         //}
 
 
+
+        
 
     }
 }

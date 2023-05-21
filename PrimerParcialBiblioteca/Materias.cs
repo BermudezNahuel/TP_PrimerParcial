@@ -8,11 +8,11 @@ namespace PrimerParcialBiblioteca
 {
     public class Materia
     {
-        private string _curso;
+        private ClaseEnum.Curso _curso;
         private List<string> _materias;
    
 
-        public string Curso { get => _curso; set => _curso = value; }
+        public ClaseEnum.Curso Curso { get => _curso; set => _curso = value; }
         public List<string> Materias { get => _materias; set => _materias = value; }
      
         

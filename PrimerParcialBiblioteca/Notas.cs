@@ -22,7 +22,7 @@ namespace PrimerParcialBiblioteca
 
         public static Dictionary<string, List<int>> AsignarMaterias (int anio)
         {
-            var materias = Datos.Abrir("C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datos_1.json").Materias;
+            var materias = Datos.Abrir().Materias;
 
             var materiaAnio = materias[anio].Materias;
 

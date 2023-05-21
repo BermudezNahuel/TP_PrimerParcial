@@ -25,8 +25,7 @@ namespace PrimerParcialUI
 
         private void btn_crear_Click(object sender, EventArgs e)
         {
-            CrearUsuario.CrearAlumno(txt_nombre.Text, txt_apellido.Text, Convert.ToInt32(txt_dni.Text), txt_telefono.Text, Convert.ToInt32(txt_anio.Text));
-
+            AdministrarUsuario.AgregarUsuario(txt_nombre.Text, txt_apellido.Text, Convert.ToInt32(txt_dni.Text), txt_telefono.Text, Convert.ToInt32(txt_anio.Text));
         }
 
         private void button2_Click(object sender, EventArgs e)

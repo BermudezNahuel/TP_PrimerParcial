@@ -20,5 +20,7 @@ namespace PrimerParcialBiblioteca
             return listaDnis;
 
         }
+
+        public static ClaseEnum ClaseEnum { get; set; }
     }
 }

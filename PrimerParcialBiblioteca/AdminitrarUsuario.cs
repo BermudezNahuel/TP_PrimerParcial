@@ -12,7 +12,7 @@ namespace PrimerParcialBiblioteca
         
         public static void AgregarUsuario(string nombre, string apellido, int dni, string telefono, int anio)
         {
-            var datos = Datos.Abrir("C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datos_1.json");
+            var datos = Datos.Abrir();
 
             var listaAlumnos = datos.Alumnos;
 
@@ -28,7 +28,7 @@ namespace PrimerParcialBiblioteca
 
             listaAlumnos.Add(alumno);
 
-            Datos.Guardar(datos, "C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\datos_1.json");
+            Datos.Guardar(datos);
         }
     }
 }
