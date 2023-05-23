@@ -15,6 +15,13 @@ namespace PrimerParcialUI
         public AltaDocenteUI()
         {
             InitializeComponent();
+            Size = new Size(1081, 677);
+            BackColor = Color.CornflowerBlue;
+        }
+
+        private void AltaDocenteUI_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace PrimerParcialBiblioteca
 {
-    public class User
+    public abstract class User
 
     {
         private string _nombre;
@@ -22,9 +22,9 @@ namespace PrimerParcialBiblioteca
         public int Dni 
         { 
             get => _dni;
-            private set 
+            set 
             {
-                _dni = Validar.ValidarDniOrThrow(Convert.ToInt32(value));
+                _dni = Convert.ToInt32(value);
             } 
         }
         public string Username { get => _userName; set => _userName = value; }
@@ -34,7 +34,7 @@ namespace PrimerParcialBiblioteca
         {
             _nombre = nombre;
             _apellido = apellido;
-            _dni = Validar.ValidarDniOrThrow(dni);
+            _dni = dni;
             _telefono = telefono;
             _password = dni;
             _userName = Convert.ToString(dni);

@@ -10,25 +10,25 @@ namespace PrimerParcialBiblioteca
 {
     public class Validar
     {
-        static public int ValidarDniOrThrow(int dni)
+        static public bool ValidarDni(int dni)
         {
-            if (dni < 0)
+            if (dni > 0)
             {
-                throw new ArgumentException("El numero de DNI no es valido");
+                return true;
             }
-            return dni;
+            return false;
         }
 
-        static public int ValidarDniOrThrow(int dni, List<int> listaDni)
+        static public bool ValidarDni(int dni, List<int> listaDni)
         {
             foreach (int i in listaDni) 
             {
                 if (dni == i)
                 {
-                    throw new ArgumentException("El numero de DNI ya fue ingresado");
+                    return false;
                 }
             }
-            return dni;
+            return true;
         }
 
        

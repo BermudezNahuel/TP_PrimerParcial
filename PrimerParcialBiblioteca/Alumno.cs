@@ -9,9 +9,8 @@ namespace PrimerParcialBiblioteca
     public class Alumno : User
     {
         private int _legajo;
-        private static int _anio;
+        private int _anio;
         private Dictionary<string, List<int>> _notas;
-        //public string _notas { get; set; }
 
         public int Legajo { get => _legajo; set => _legajo = value;}
 
@@ -22,11 +21,7 @@ namespace PrimerParcialBiblioteca
             get => _notas; set => _notas = value;
         }
 
-        //public void notas (string dicc)
-        //{
-        //    _notas = dicc;
-        //}
-
+  
         public Alumno(string nombre, string apellido, int dni, string telefono, int anio, int lengthLista, Dictionary<string, List<int>> dicc) : base(nombre,apellido,dni,telefono)
         { 
             _anio = anio;
@@ -36,6 +31,10 @@ namespace PrimerParcialBiblioteca
         }  
        
 
+        /// <summary>
+        /// Toma los atributos del alumno y los devuelve en formato string
+        /// </summary>
+        /// <returns>Retorna un string</returns>
         public override string MostrarInfo()
         {
             StringBuilder sb = new StringBuilder ();

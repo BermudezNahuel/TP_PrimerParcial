@@ -16,18 +16,26 @@ namespace PrimerParcialUI
         public PreceptorUI()
         {
             InitializeComponent();
+            Size = new Size(1081, 677);
+            BackColor = Color.PaleGreen;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-            FormIngresoAlumno altaAlumno = new FormIngresoAlumno();
-            altaAlumno.Show();
+        private void Btn_salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
-        private void PreceptorUI_Load(object sender, EventArgs e)
+        private void Btn_AlumnoDarAlta_Click(object sender, EventArgs e)
         {
+            FormIngresoAlumno formAlumno = new FormIngresoAlumno();
+            formAlumno.Show();
+        }
 
+        private void Btn_AlumnoGestionar_Click(object sender, EventArgs e)
+        {
+            FormPreceptorBuscarAlumno form = new FormPreceptorBuscarAlumno();
+            form.Show();
         }
     }
 }

@@ -28,80 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView_notas = new DataGridView();
-            txt_nombre = new TextBox();
-            lbl_nombre = new Label();
-            txt_apellido = new TextBox();
-            lbl_apellido = new Label();
-            button1 = new Button();
+            dtg_notas = new DataGridView();
             Materias = new DataGridViewTextBoxColumn();
             Notas = new DataGridViewTextBoxColumn();
             Col_SegundoCuatri = new DataGridViewTextBoxColumn();
             Col_NotaFinal = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView_notas).BeginInit();
+            txt_nombre = new TextBox();
+            lbl_nombre = new Label();
+            txt_apellido = new TextBox();
+            lbl_apellido = new Label();
+            btn_salir = new Button();
+            btn_guardar = new Button();
+            ((System.ComponentModel.ISupportInitialize)dtg_notas).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView_notas
+            // dtg_notas
             // 
-            dataGridView_notas.AllowUserToOrderColumns = true;
-            dataGridView_notas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_notas.Columns.AddRange(new DataGridViewColumn[] { Materias, Notas, Col_SegundoCuatri, Col_NotaFinal });
-            dataGridView_notas.Location = new Point(99, 128);
-            dataGridView_notas.Name = "dataGridView_notas";
-            dataGridView_notas.RowHeadersWidth = 62;
-            dataGridView_notas.RowTemplate.Height = 33;
-            dataGridView_notas.Size = new Size(726, 338);
-            dataGridView_notas.TabIndex = 0;
-            dataGridView_notas.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // txt_nombre
-            // 
-            txt_nombre.Location = new Point(99, 49);
-            txt_nombre.Name = "txt_nombre";
-            txt_nombre.Size = new Size(150, 31);
-            txt_nombre.TabIndex = 1;
-            // 
-            // lbl_nombre
-            // 
-            lbl_nombre.AutoSize = true;
-            lbl_nombre.Location = new Point(103, 14);
-            lbl_nombre.Name = "lbl_nombre";
-            lbl_nombre.Size = new Size(78, 25);
-            lbl_nombre.TabIndex = 2;
-            lbl_nombre.Text = "Nombre";
-            // 
-            // txt_apellido
-            // 
-            txt_apellido.Location = new Point(417, 49);
-            txt_apellido.Name = "txt_apellido";
-            txt_apellido.Size = new Size(150, 31);
-            txt_apellido.TabIndex = 3;
-            // 
-            // lbl_apellido
-            // 
-            lbl_apellido.AutoSize = true;
-            lbl_apellido.Location = new Point(417, 14);
-            lbl_apellido.Name = "lbl_apellido";
-            lbl_apellido.Size = new Size(78, 25);
-            lbl_apellido.TabIndex = 4;
-            lbl_apellido.Text = "Apellido";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(634, 27);
-            button1.Name = "button1";
-            button1.Size = new Size(174, 53);
-            button1.TabIndex = 5;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            dtg_notas.AllowUserToOrderColumns = true;
+            dtg_notas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtg_notas.Columns.AddRange(new DataGridViewColumn[] { Materias, Notas, Col_SegundoCuatri, Col_NotaFinal });
+            dtg_notas.Location = new Point(104, 179);
+            dtg_notas.Name = "dtg_notas";
+            dtg_notas.RowHeadersWidth = 62;
+            dtg_notas.RowTemplate.Height = 33;
+            dtg_notas.Size = new Size(865, 338);
+            dtg_notas.TabIndex = 0;
+            dtg_notas.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Materias
             // 
             Materias.HeaderText = "Materias";
-            Materias.MinimumWidth = 8;
+            Materias.MinimumWidth = 350;
             Materias.Name = "Materias";
-            Materias.Width = 150;
+            Materias.Width = 350;
             // 
             // Notas
             // 
@@ -124,34 +83,88 @@
             Col_NotaFinal.Name = "Col_NotaFinal";
             Col_NotaFinal.Width = 150;
             // 
+            // txt_nombre
+            // 
+            txt_nombre.Location = new Point(146, 99);
+            txt_nombre.Name = "txt_nombre";
+            txt_nombre.Size = new Size(150, 31);
+            txt_nombre.TabIndex = 1;
+            // 
+            // lbl_nombre
+            // 
+            lbl_nombre.AutoSize = true;
+            lbl_nombre.Location = new Point(150, 64);
+            lbl_nombre.Name = "lbl_nombre";
+            lbl_nombre.Size = new Size(78, 25);
+            lbl_nombre.TabIndex = 2;
+            lbl_nombre.Text = "Nombre";
+            // 
+            // txt_apellido
+            // 
+            txt_apellido.Location = new Point(464, 99);
+            txt_apellido.Name = "txt_apellido";
+            txt_apellido.Size = new Size(150, 31);
+            txt_apellido.TabIndex = 3;
+            // 
+            // lbl_apellido
+            // 
+            lbl_apellido.AutoSize = true;
+            lbl_apellido.Location = new Point(464, 64);
+            lbl_apellido.Name = "lbl_apellido";
+            lbl_apellido.Size = new Size(78, 25);
+            lbl_apellido.TabIndex = 4;
+            lbl_apellido.Text = "Apellido";
+            // 
+            // btn_salir
+            // 
+            btn_salir.Location = new Point(12, 12);
+            btn_salir.Name = "btn_salir";
+            btn_salir.Size = new Size(112, 34);
+            btn_salir.TabIndex = 27;
+            btn_salir.Text = "Volver";
+            btn_salir.UseVisualStyleBackColor = true;
+            btn_salir.Click += Btn_salir_Click;
+            // 
+            // btn_guardar
+            // 
+            btn_guardar.Location = new Point(820, 96);
+            btn_guardar.Name = "btn_guardar";
+            btn_guardar.Size = new Size(112, 34);
+            btn_guardar.TabIndex = 28;
+            btn_guardar.Text = "Agregar";
+            btn_guardar.UseVisualStyleBackColor = true;
+            btn_guardar.Click += btn_guardar_Click;
+            // 
             // AlumnoUI
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1059, 621);
-            Controls.Add(button1);
+            Controls.Add(btn_guardar);
+            Controls.Add(btn_salir);
             Controls.Add(lbl_apellido);
             Controls.Add(txt_apellido);
             Controls.Add(lbl_nombre);
             Controls.Add(txt_nombre);
-            Controls.Add(dataGridView_notas);
+            Controls.Add(dtg_notas);
             Name = "AlumnoUI";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "VerNotasUI";
             Load += AlumnoUI_OnLoad;
-            ((System.ComponentModel.ISupportInitialize)dataGridView_notas).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtg_notas).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView_notas;
+        private DataGridView dtg_notas;
         private TextBox txt_nombre;
         private Label lbl_nombre;
         private TextBox txt_apellido;
         private Label lbl_apellido;
-        private Button button1;
+        private Button btn_salir;
+        private Button btn_guardar;
         private DataGridViewTextBoxColumn Materias;
         private DataGridViewTextBoxColumn Notas;
         private DataGridViewTextBoxColumn Col_SegundoCuatri;

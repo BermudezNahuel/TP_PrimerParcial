@@ -41,34 +41,26 @@ namespace PrimerParcial
 
             //}
 
-            var list = Datos.Abrir().Profesores;
 
-            foreach (var prof in list)
+            //AdministrarUsuario.AgregarUsuario("Maria", "Gutierrez", 12445663, "42226783", 4);
+            //AdministrarUsuario.AgregarUsuario("Laura", "Gonzalez", 12490873, "42225423", 4);
+            //AdministrarUsuario.AgregarUsuario("Yesica", "Cortazar", 1243118941, "42226761", 4);
+
+            //var lista = Buscar.ListarAlumnoPorCurso(1);
+
+            //foreach (var item in lista)
+            //{
+            //    Console.WriteLine(item.MostrarInfo());
+            //}
+
+            var lista = Datos.Abrir().Alumnos;
+
+            foreach (var item in lista)
             {
-                Console.WriteLine(prof.MostrarInfo());
-                foreach (var item in prof.MateriasDictadas) 
-                {
-                    Console.WriteLine( item.MostrarInfo());
-                }
+                Console.WriteLine(item.MostrarInfo());
             }
 
-            var cursos = ClaseEnum.Curso.PrimerAño;
-            
 
-            string archivoJson = JsonConvert.SerializeObject(cursos, Formatting.Indented);
-            File.WriteAllText("C:\\Users\\Nahuel\\source\\repos\\TP_PrimerParcial\\PrimerParcial\\bin\\Debug\\net6.0\\enum_01.json", archivoJson);
-
-            var prfo1 = list[1];
-
-            foreach (var item in prfo1.MateriasDictadas)
-            {
-                //cbo_anio.Items.Add((int)item.Curso);
-                foreach (var materia in item.Materias)
-                {
-                    //cbo_materia.Items.Add(item.ToString());
-                    Console.WriteLine(materia);
-                }
-            }
 
 
         }

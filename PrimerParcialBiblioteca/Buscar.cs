@@ -21,6 +21,28 @@ namespace PrimerParcialBiblioteca
 
         }
 
-        public static ClaseEnum ClaseEnum { get; set; }
+        /// <summary>
+        /// Busca en la lista de alumnos y los agrupa por curso.
+        /// </summary>
+        /// <param name="curso">Curso</param>
+        /// <returns>Retorna una lista de Alumnos que pertenecen al mismo curso</returns>
+        public static List<Alumno> ListarAlumnoPorCurso(int curso)
+        {
+            var lista = new List<Alumno>();
+            var listaAlumnos = Datos.Abrir().Alumnos;
+            curso++;
+
+            foreach (var alumno in listaAlumnos)
+            {
+                if(alumno.Anio == curso)
+                {
+                    lista.Add(alumno);
+                }
+            }
+
+            return lista;
+        }
+
+        
     }
 }

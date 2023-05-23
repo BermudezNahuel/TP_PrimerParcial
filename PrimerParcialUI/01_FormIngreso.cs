@@ -10,7 +10,9 @@ namespace PrimerParcialUI
         {
             InitializeComponent();
             Size = new Size(1081, 677);
-            BackColor = Color.NavajoWhite;
+            BackColor = Color.CornflowerBlue;
+
+
 
         }
 
@@ -19,20 +21,25 @@ namespace PrimerParcialUI
 
         }
 
-        private void btn_ingresar_Click(object sender, EventArgs e)
+        private void Btn_ingresar_Click(object sender, EventArgs e)
         {
             PreceptorUI preceptorUI = new PreceptorUI();
             preceptorUI.Show();
         }
 
 
-        private void btn_ingreso_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Valida que que la el usuario y la contraseña
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Btn_ingreso_Click(object sender, EventArgs e)
         {
-          
+
             var listaAlumnos = Datos.Abrir().Alumnos;
             var listaProfesores = Datos.Abrir().Profesores;
             var listaAdmin = Datos.Abrir().Admin;
-            txt_usuario_TextChanged();
+
 
             try
             {
@@ -46,8 +53,11 @@ namespace PrimerParcialUI
                         if (item.Dni == Convert.ToInt32(txt_usuario.Text))
                         {
                             AlumnoUI alumnoUI = new AlumnoUI();
+                            //alumnoUI.MdiParent = this;
                             alumnoUI.Info_alumno(item);
                             alumnoUI.Show();
+                            txt_password.Clear();
+                            txt_usuario.Clear();
                         }
                     }
                 }
@@ -57,9 +67,12 @@ namespace PrimerParcialUI
                     {
                         if (item.Dni == Convert.ToInt32(txt_usuario.Text))
                         {
-                            PreceptorUI preceptorUI = new PreceptorUI(); ;
+                            PreceptorUI preceptorUI = new PreceptorUI();
+                            //preceptorUI.MdiParent = this;
                             //preceptorUI.Info_preceptor(item);
                             preceptorUI.Show();
+                            txt_password.Clear();
+                            txt_usuario.Clear();
                         }
                     }
 
@@ -71,43 +84,35 @@ namespace PrimerParcialUI
                         if (item.Dni == Convert.ToInt32(txt_usuario.Text))
                         {
                             Profesor_01UI ingresoProfes = new Profesor_01UI();
+                            //ingresoProfes.MdiParent = this;
                             ingresoProfes.Info_profesor(item);
                             ingresoProfes.Show();
+                            txt_password.Clear();
+                            txt_usuario.Clear();
                         }
                     }
                 }
-                throw new Exception();
-
-
+                txt_password.Clear();
+                txt_usuario.Clear();
 
             }
-            catch (FormatException ex)
+            catch (FormatException)
             {
 
                 lbl_errorFormat.Visible = true;
-                txt_usuario.Text = "";
-                txt_password.Text = "";
-                //MessageBox.Show(ex.Message.ToString());
+                txt_usuario.Clear();
+                txt_password.Clear();
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 lbl_errorContraseña.Visible = true;
-                txt_usuario.Text = "";
-                txt_password.Text = "";
+                txt_usuario.Clear();
+                txt_password.Clear();
             }
         }
 
-        private void txt_usuario_TextChanged()
-        {
-            lbl_errorFormat.Visible = false;
-            lbl_errorContraseña.Visible = false;
-        }
-
-        private void txt_password_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
 
