@@ -13,7 +13,7 @@ namespace PrimerParcialUI
 
             ApplicationConfiguration.Initialize();
             Application.Run(new FormularioLog());
-            //Application.Run(new FormPreceptorBuscarAlumno());
+            //Application.Run(new AltaDocenteUI());
 
         }
     }
