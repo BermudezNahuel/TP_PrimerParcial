@@ -19,6 +19,10 @@ namespace PrimerParcialBiblioteca
            
         }
 
+        /// <summary>
+        /// Toma los atributos de la clase, convierte y los retonarna como string
+        /// </summary>
+        /// <returns></returns>
         public override string MostrarInfo()
         {
             StringBuilder sb = new StringBuilder();

@@ -57,6 +57,7 @@
             Btn_ProfesorDarAlta.TabIndex = 2;
             Btn_ProfesorDarAlta.Text = "Agregar Profesor";
             Btn_ProfesorDarAlta.UseVisualStyleBackColor = true;
+            Btn_ProfesorDarAlta.Click += Btn_ProfesorDarAlta_Click;
             // 
             // Btn_Salir
             // 

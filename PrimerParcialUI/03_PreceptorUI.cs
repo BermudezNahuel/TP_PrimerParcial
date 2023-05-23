@@ -38,5 +38,12 @@ namespace PrimerParcialUI
             FormPreceptorBuscarAlumno form = new FormPreceptorBuscarAlumno();
             form.Show();
         }
+
+        private void Btn_ProfesorDarAlta_Click(object sender, EventArgs e)
+        {
+            AltaDocenteUI form = new AltaDocenteUI();
+            form.Show();
+
+        }
     }
 }
