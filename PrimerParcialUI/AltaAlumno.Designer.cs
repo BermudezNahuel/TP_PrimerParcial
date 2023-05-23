@@ -69,7 +69,7 @@
             txt_dni.Name = "txt_dni";
             txt_dni.Size = new Size(200, 41);
             txt_dni.TabIndex = 19;
-            txt_dni.TextChanged += txt_dni_TextChanged;
+
             // 
             // txt_apellido
             // 
@@ -222,7 +222,7 @@
             Name = "FormIngresoAlumno";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormIngreso";
-            Load += PlanillaInscripcionUI_Load;
+
             ResumeLayout(false);
             PerformLayout();
         }

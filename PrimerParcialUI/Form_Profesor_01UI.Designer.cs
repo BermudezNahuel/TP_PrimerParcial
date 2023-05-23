@@ -34,7 +34,7 @@
             cbo_materia = new ComboBox();
             cbo_anio = new ComboBox();
             btn_calificar = new Button();
-            button1 = new Button();
+            btn_salir = new Button();
             lbl_mensaje = new Label();
             lbl_errorMateriaAnio = new Label();
             SuspendLayout();
@@ -92,15 +92,15 @@
             btn_calificar.UseVisualStyleBackColor = true;
             btn_calificar.Click += Btn_calificar_Click;
             // 
-            // button1
+            // btn_salir
             // 
-            button1.Location = new Point(12, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 27;
-            button1.Text = "Volver";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += Button1_Click;
+            btn_salir.Location = new Point(12, 12);
+            btn_salir.Name = "btn_salir";
+            btn_salir.Size = new Size(112, 34);
+            btn_salir.TabIndex = 27;
+            btn_salir.Text = "Volver";
+            btn_salir.UseVisualStyleBackColor = true;
+            btn_salir.Click += Button1_Click;
             // 
             // lbl_mensaje
             // 
@@ -134,7 +134,7 @@
             ClientSize = new Size(1059, 621);
             Controls.Add(lbl_errorMateriaAnio);
             Controls.Add(lbl_mensaje);
-            Controls.Add(button1);
+            Controls.Add(btn_salir);
             Controls.Add(btn_calificar);
             Controls.Add(cbo_anio);
             Controls.Add(cbo_materia);
@@ -142,7 +142,6 @@
             Controls.Add(lbl_materia);
             ForeColor = SystemColors.ControlText;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            ImeMode = ImeMode.NoControl;
             Name = "Profesor_01UI";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Profesor_01UI";
@@ -157,7 +156,7 @@
         private ComboBox cbo_materia;
         private ComboBox cbo_anio;
         private Button btn_calificar;
-        private Button button1;
+        private Button btn_salir;
         private Label lbl_mensaje;
         private Label lbl_errorMateriaAnio;
     }

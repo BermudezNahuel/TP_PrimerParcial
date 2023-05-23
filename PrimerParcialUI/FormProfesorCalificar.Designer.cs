@@ -38,6 +38,8 @@
             Col_SegundoCuatri = new DataGridViewTextBoxColumn();
             Col_NotaFinal = new DataGridViewTextBoxColumn();
             btn_salir = new Button();
+            label1 = new Label();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dtg_notas).BeginInit();
             SuspendLayout();
             // 
@@ -56,7 +58,7 @@
             // 
             lbl_materia.AutoSize = true;
             lbl_materia.Font = new Font("Bahnschrift Light", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_materia.Location = new Point(578, 65);
+            lbl_materia.Location = new Point(623, 66);
             lbl_materia.Name = "lbl_materia";
             lbl_materia.Size = new Size(97, 29);
             lbl_materia.TabIndex = 35;
@@ -128,11 +130,33 @@
             btn_salir.UseVisualStyleBackColor = true;
             btn_salir.Click += Btn_salir_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Bahnschrift Light", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(320, 66);
+            label1.Name = "label1";
+            label1.Size = new Size(60, 29);
+            label1.TabIndex = 37;
+            label1.Text = "Año:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Bahnschrift Light", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(487, 65);
+            label2.Name = "label2";
+            label2.Size = new Size(135, 29);
+            label2.TabIndex = 38;
+            label2.Text = "Asignatura:";
+            // 
             // FormProfesorCalificar
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1064, 621);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(btn_guardar);
             Controls.Add(lbl_materia);
             Controls.Add(lbl_curso);
@@ -140,6 +164,7 @@
             Controls.Add(btn_salir);
             Name = "FormProfesorCalificar";
             Text = "FormProfesorCalificar";
+            Load += FormProfesorCalificar_Load;
             ((System.ComponentModel.ISupportInitialize)dtg_notas).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -156,5 +181,7 @@
         private DataGridViewTextBoxColumn Col_SegundoCuatri;
         private DataGridViewTextBoxColumn Col_NotaFinal;
         private Button btn_salir;
+        private Label label1;
+        private Label label2;
     }
 }

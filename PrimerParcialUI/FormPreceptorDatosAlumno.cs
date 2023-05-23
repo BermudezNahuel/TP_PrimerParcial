@@ -20,7 +20,7 @@ namespace PrimerParcialUI
             InitializeComponent();
             Size = new Size(1081, 677);
             BackColor = Color.NavajoWhite;
-
+            Btn_Salir.Font = new Font("Bahnschrift", 12, FontStyle.Bold, GraphicsUnit.Point);
         }
 
 
@@ -129,6 +129,11 @@ namespace PrimerParcialUI
             }
         }
 
+        /// <summary>
+        /// Cierra el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Salir_Click(object sender, EventArgs e)
         {
             this.Close();

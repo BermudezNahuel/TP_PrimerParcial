@@ -8,6 +8,12 @@ namespace PrimerParcialBiblioteca
 {
     public static class Buscar
     {
+        /// <summary>
+        /// Busca en una lista de alumnos y retorna todos sus numeros de 
+        /// documentos en una lista
+        /// </summary>
+        /// <param name="listaAlumnos"></param>
+        /// <returns>Retorna una lista de int</returns>
         public static List<int> ListarDni(List<Alumno> listaAlumnos)
         {
             var listaDnis = new List<int>();

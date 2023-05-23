@@ -23,20 +23,14 @@ namespace PrimerParcialUI
             InitializeComponent();
             Size = new Size(1081, 677);
             BackColor = Color.NavajoWhite;
+            //btn_salir.Font = new Font ("Arial", 10, FontStyle.Bold, GraphicsUnit.Point);
+            btn_salir.Font = new Font("Bahnschrift", 12, FontStyle.Bold, GraphicsUnit.Point);
         }
 
 
-        /// <summary>
-        /// Toma como parametro un curso y una materia de la Clase Alumno y completa
-        /// completa el data grid con la nota de los alumnos de un curso determinado
-        /// </summary>
-        /// <param name="curso"></param>
-        /// <param name="materia"></param>
-        public void CursoYMateria(int curso, string materia)
-        {
-            _curso = curso;
-            _materia = materia;
 
+        private void FormProfesorCalificar_Load(object sender, EventArgs e)
+        {
             lbl_curso.Text = Convert.ToString(_curso);
             lbl_materia.Text = _materia;
 
@@ -51,6 +45,19 @@ namespace PrimerParcialUI
                 dtg_notas.Rows.Add((alumno.Apellido + " " + alumno.Nombre), mat[0], mat[1], mat[2]);
 
             }
+        }
+
+
+        /// <summary>
+        /// Toma como parametro un curso y una materia de la Clase Alumno y completa
+        /// completa el data grid con la nota de los alumnos de un curso determinado
+        /// </summary>
+        /// <param name="curso"></param>
+        /// <param name="materia"></param>
+        public void CursoYMateria(int curso, string materia)
+        {
+            _curso = curso;
+            _materia = materia;
         }
 
 
@@ -97,5 +104,6 @@ namespace PrimerParcialUI
         {
             this.Close();
         }
+
     }
 }

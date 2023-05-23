@@ -53,7 +53,7 @@
             dtg_notas.RowTemplate.Height = 33;
             dtg_notas.Size = new Size(865, 338);
             dtg_notas.TabIndex = 0;
-            dtg_notas.CellContentClick += dataGridView1_CellContentClick;
+
             // 
             // Materias
             // 
@@ -133,7 +133,7 @@
             btn_guardar.TabIndex = 28;
             btn_guardar.Text = "Agregar";
             btn_guardar.UseVisualStyleBackColor = true;
-            btn_guardar.Click += btn_guardar_Click;
+
             // 
             // AlumnoUI
             // 
@@ -150,7 +150,7 @@
             Name = "AlumnoUI";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "VerNotasUI";
-            Load += AlumnoUI_OnLoad;
+
             ((System.ComponentModel.ISupportInitialize)dtg_notas).EndInit();
             ResumeLayout(false);
             PerformLayout();

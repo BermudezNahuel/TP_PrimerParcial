@@ -18,6 +18,7 @@ namespace PrimerParcialUI
             InitializeComponent();
             Size = new Size(1081, 677);
             BackColor = Color.PaleGreen;
+            Btn_Salir.Font = new Font("Bahnschrift", 12, FontStyle.Bold, GraphicsUnit.Point);
         }
 
 

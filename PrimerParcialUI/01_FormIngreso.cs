@@ -11,7 +11,7 @@ namespace PrimerParcialUI
             InitializeComponent();
             Size = new Size(1081, 677);
             BackColor = Color.CornflowerBlue;
-
+            
 
 
         }

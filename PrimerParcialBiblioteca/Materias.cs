@@ -16,6 +16,11 @@ namespace PrimerParcialBiblioteca
         public List<string> Materias { get => _materias; set => _materias = value; }
      
         
+
+        /// <summary>
+        /// Convierte la lista de materias y las convierte en un string
+        /// </summary>
+        /// <returns></returns>
         public string MostrarInfo()
         {
             StringBuilder sb = new StringBuilder();

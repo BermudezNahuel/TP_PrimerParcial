@@ -22,6 +22,7 @@ namespace PrimerParcialUI
             InitializeComponent();
             Size = new Size(1081, 677);
             BackColor = Color.NavajoWhite;
+            btn_salir.Font = new Font("Bahnschrift", 12, FontStyle.Bold, GraphicsUnit.Point);
 
         }
 
@@ -36,6 +37,12 @@ namespace PrimerParcialUI
             this.Close();
         }
 
+
+        /// <summary>
+        /// Completa los comboBox con la informacion de los cursos y la materias
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Profesor_01UI_Load(object sender, EventArgs e)
         {
 
@@ -67,7 +74,10 @@ namespace PrimerParcialUI
 
         }
 
-
+        /// <summary>
+        /// Asigna un valor al atributo _profesor
+        /// </summary>
+        /// <param name="profesor">Recibe un objeto tipo tipo Profesor</param>
         public void Info_profesor(Profesor profesor)
         {
             _profesor = profesor;

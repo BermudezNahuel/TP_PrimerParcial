@@ -32,6 +32,7 @@
             btn_buscar = new Button();
             textBox_dni = new TextBox();
             label1 = new Label();
+            Btn_salir = new Button();
             SuspendLayout();
             // 
             // btn_buscar
@@ -60,6 +61,16 @@
             label1.TabIndex = 2;
             label1.Text = "Introducir DNI del alumno";
             // 
+            // Btn_salir
+            // 
+            Btn_salir.Location = new Point(12, 11);
+            Btn_salir.Name = "Btn_salir";
+            Btn_salir.Size = new Size(106, 38);
+            Btn_salir.TabIndex = 3;
+            Btn_salir.Text = "Volver";
+            Btn_salir.UseVisualStyleBackColor = true;
+            Btn_salir.Click += Btn_salir_Click;
+            // 
             // FormPreceptorBuscarAlumno
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -68,6 +79,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1059, 621);
+            Controls.Add(Btn_salir);
             Controls.Add(label1);
             Controls.Add(textBox_dni);
             Controls.Add(btn_buscar);
@@ -82,5 +94,6 @@
         private Button btn_buscar;
         private TextBox textBox_dni;
         private Label label1;
+        private Button Btn_salir;
     }
 }

@@ -10,15 +10,16 @@ namespace PrimerParcialBiblioteca
 {
     public class Validar
     {
-        static public bool ValidarDni(int dni)
-        {
-            if (dni > 0)
-            {
-                return true;
-            }
-            return false;
-        }
+        
 
+
+        /// <summary>
+        /// Valida si el dni pasado como parametro ya se 
+        /// encuentra registrado en el archivo json
+        /// </summary>
+        /// <param name="dni"></param>
+        /// <param name="listaDni"></param>
+        /// <returns></returns>
         static public bool ValidarDni(int dni, List<int> listaDni)
         {
             foreach (int i in listaDni) 

@@ -6,16 +6,6 @@ using System.Threading.Tasks;
 
 namespace PrimerParcialBiblioteca
 {
-    public enum Año
-    {
-        primerAño = 1,
-        segundoAño,
-        terceAño,
-        cuartoAño,
-        quintoAño,
-        sextoAño
-
-    }
     public static class Notas
     {
         

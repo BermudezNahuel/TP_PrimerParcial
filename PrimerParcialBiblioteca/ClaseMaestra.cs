@@ -14,16 +14,6 @@ namespace PrimerParcialBiblioteca
         public List<Administrador> Admin{ get; set;  }
 
 
-        public void AgregarUsuario(Alumno usuario)
-        {
-            
-            Alumnos.Add(usuario);
-        }
-        public void AgregarUsuario(Profesor usuario)
-        {
-            Profesores.Add(usuario);
-        }
-
     }
 
 }
