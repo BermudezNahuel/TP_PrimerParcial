@@ -76,7 +76,10 @@
             // 
             // dtg_notas
             // 
-            dtg_notas.AllowUserToOrderColumns = true;
+            dtg_notas.AllowUserToAddRows = false;
+            dtg_notas.AllowUserToDeleteRows = false;
+            dtg_notas.AllowUserToResizeColumns = false;
+            dtg_notas.AllowUserToResizeRows = false;
             dtg_notas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtg_notas.Columns.AddRange(new DataGridViewColumn[] { NombreApellido, Notas, Col_SegundoCuatri, Col_NotaFinal });
             dtg_notas.GridColor = SystemColors.ActiveCaption;
